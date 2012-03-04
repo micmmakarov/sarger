@@ -1,6 +1,9 @@
 App2::Application.routes.draw do
   devise_for :users
 
+  get '/gains' => 'gains#index'
+  resources :gains
+
   resources :challenges do
     resources :task
   end

@@ -1,0 +1,33 @@
+<%= form_for(@gain) do |f| %>
+  <% if @gain.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gain.errors.count, "error") %> prohibited this gain from being saved:</h2>
+
+      <ul>
+      <% @gain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :task_id %><br />
+    <%= f.number_field :task_id %>
+  </div>
+  <div class="field">
+    <%= f.label :notice %><br />
+    <%= f.text_area :notice %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.check_box :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

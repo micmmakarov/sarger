@@ -11,5 +11,7 @@ class GainControllerTest < ActionController::TestCase
     result = assigns(:gains)
     assert_not_nil result
 
+    assert_template :index
+    assert_select '.gains'
   end
 end

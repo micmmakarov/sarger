@@ -1,0 +1,10 @@
+
+
+%h3 Gains
+
+.gains
+  %ul
+    - @gains.each do |gain|
+      %li
+        = gain.notice
+        = gain.task.title

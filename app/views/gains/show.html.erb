@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @gain.user_id %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @gain.task_id %>
+</p>
+
+<p>
+  <b>Notice:</b>
+  <%= @gain.notice %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @gain.status %>
+</p>
+
+
+<%= link_to 'Edit', edit_gain_path(@gain) %> |
+<%= link_to 'Back', gains_path %>
