@@ -1,0 +1,13 @@
+<% @challenges.each do |challenge| %>
+    <tr>
+      <td><%= challenge.title %></td>
+      <td><%= challenge.description %></td>
+      <td><%= challenge.note %></td>
+      <td><%= link_to 'Show', challenge %></td>
+      <td><%= link_to 'Edit', edit_challenge_path(challenge) %></td>
+      <td><%= link_to 'Destroy', challenge, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+<% end %>
+</table>
+
+<%= render "challenges/list" %>
