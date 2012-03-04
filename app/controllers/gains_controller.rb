@@ -4,7 +4,7 @@ class GainsController < ApplicationController
   def index
     @gains = Gain.all(:conditions => {:user_id => current_user.id},
         :limit => 10,
-        :include => [ :tasks ],
+        :include => [ :task ],
         :order => 'notice desc'
 )
     respond_to do |format|

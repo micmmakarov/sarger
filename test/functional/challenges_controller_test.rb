@@ -14,6 +14,7 @@ class ChallengesControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_assigns :challenges
   end
 
   test "should create challenge" do
